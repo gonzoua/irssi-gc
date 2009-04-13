@@ -1,0 +1,45 @@
+--[ $Id: README,v 1.2 2003/09/24 00:13:46 gonzo Exp $
+
+--[ Author
+    Oleksandr Tymoshenko <gonzo@univ.kiev.ua>
+
+--[ Description
+    Simple plugin which gives jabber groupchat functionality for Irssi 
+    In next versions will be extended by basic jabber features
+
+--[ Usage
+    /script load /full/path/to/gc.pl
+    or
+    place gc.pl into irssi scripts directory and use
+    /script load gc.pl
+    Hint:
+    quote of ~/.irssi/config
+    aliases = { 
+          ...
+          JL = "script load /usr/home/gonzo/projects/gc/gc.pl";
+          JI = "/jconnect -SSL -port 443 jabber.kiev.ua gonzo MyPasswordIsSoLongThatICantRememberHowToWriteIt";
+          JJ = "/jjoin devel gonzo@console conference.jabber.ru";
+          ...
+    }
+
+
+--[ Commands
+    /jconnect [-ssl] [-port port] server user password
+        Connects to given jabber server 
+
+    /jjoin room nick server
+        Join groupchat room 
+
+    /jwho
+        List active users in current room
+
+    /jmsg jid message
+        Send message to JID
+
+    /jchat jid [message]    
+        Open chat window with jid
+
+    /jpart 
+        close current window    
+
+--[ The End
